@@ -1,18 +1,23 @@
-const Filter = ({ onTitleChange, onRatingChange }) => (
-  <div className="filter">
-    <input
-      type="text"
-      placeholder="Search by title"
-      onChange={(e) => onTitleChange(e.target.value)}
-    />
-    <input
-      type="number"
-      min="0"
-      max="10"
-      placeholder="Minimum rating"
-      onChange={(e) => onRatingChange(e.target.value)}
-    />
-  </div>
-);
+import React from 'react';
+
+function Filter({ setFilterTitle, setFilterRating }) {
+  return (
+    <div className="flex gap-4 mb-4">
+      <input
+        type="text"
+        placeholder="Filter by title"
+        onChange={(e) => setFilterTitle(e.target.value)}
+        className="border p-2 rounded w-full"
+      />
+      <input
+        type="number"
+        placeholder="Min rating"
+        onChange={(e) => setFilterRating(Number(e.target.value))}
+        className="border p-2 rounded w-32"
+      />
+    </div>
+  );
+}
 
 export default Filter;
+

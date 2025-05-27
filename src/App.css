@@ -13,6 +13,12 @@ body {
   
   
 }
+h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
 input{
   width:50vw;
   height:5vh;
